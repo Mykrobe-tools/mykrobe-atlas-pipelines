@@ -1,0 +1,123 @@
+{
+  "group": "CLIENT",
+  "name": "build",
+  "label_template": "${COUNT}",
+  "lock_behavior": "none",
+  "environment_variables": [
+    {
+      "name": "DOCKERHUB_USERNAME",
+      "value": "mthomsit"
+    },
+    {
+      "name": "DOCKERHUB_HOST",
+      "value": ""
+    },
+    {
+      "name": "DOCKERHUB_PASSWORD",
+      "encrypted_value": "AES:njaZyAYKMj9Refh7hOh8+g\u003d\u003d:Ff5vRYbrbklSPPayVA5bnQ\u003d\u003d"
+    }
+  ],
+  "parameters": [],
+  "materials": [
+    {
+      "url": "git@client.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api.git",
+      "branch": "feature/731-k8-deploy",
+      "shallow_clone": false,
+      "filter": {
+        "ignore": [],
+        "whitelist": []
+      },
+      "auto_update": true,
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+        "type": "success",
+        "users": [],
+        "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "build",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [
+            {
+              "id": "atlas-client",
+              "store_id": "DockerHub",
+              "configuration": [
+                {
+                  "key": "Image",
+                  "value": "${DOCKERHUB_USERNAME}/atlas-client"
+                },
+                {
+                  "key": "Tag",
+                  "value": "${GO_PIPELINE_LABEL}"
+                },
+                {
+                  "key": "BuildFile",
+                  "value": ""
+                }
+              ],
+              "type": "external"
+            }
+          ],
+          "properties": [],
+          "elastic_profile_id": "atlas-api",
+          "run_instance_count": "0",
+          "timeout": 0.0,
+          "tasks": [
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "cp /home/go/.ssh/bitbucket-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "cp /home/go/.ssh/atlas-jsonschema-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "cp /home/go/.ssh/atlas-deploy-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "docker build -t $DOCKERHUB_USERNAME/atlas-api:$GO_PIPELINE_LABEL . -f deploy/ClientDockerfile"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

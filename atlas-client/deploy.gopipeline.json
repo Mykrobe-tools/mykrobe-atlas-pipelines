@@ -1,0 +1,128 @@
+{
+  "group": "CLIENT",
+  "name": "deploy",
+  "label_template": "${COUNT}",
+  "lock_behavior": "none",
+  "environment_variables": [
+    {
+      "name": "DOCKERHUB_USERNAME",
+      "value": "mthomsit"
+    },
+    {
+      "name": "NAMESPACE",
+      "value": "mykrobe"
+    },
+    {
+      "name": "AWS_SECRET_KEY",
+      "value": "Ch8GWtz5rJ4XOLNArg30thxfOX9oFqNyX3DS282V"
+    },
+    {
+      "name": "AWS_ACCESS_KEY",
+      "value": "AKIAIXA6O4I5CNPLVEZQ"
+    },
+    {
+      "name": "AWS_REGION",
+      "value": "eu-west-1"
+    },
+    {
+      "name": "ATLAS_APP",
+      "value": "https://dev-mykrobe.makeandship.com"
+    },
+    {
+      "name": "ES_CLUSTER_URL",
+      "value": "https://admin:Fc&S8QL<@j<&}3Bj@es-dev.makeandship.com:9200"
+    },
+    {
+      "name": "ES_INDEX_NAME",
+      "value": "mykrobe-dev"
+    },
+    {
+      "name": "KEYCLOAK_REDIRECT_URI",
+      "value": "https://dev-mykrobe.makeandship.com/"
+    },
+    {
+      "name": "SWAGGER_API_URL",
+      "value": "https://api-dev-mykrobe.makeandship.com/swagger.json"
+    },
+    {
+      "name": "API_HOST",
+      "value": "api-dev-mykrobe.makeandship.com"
+    },
+    {
+      "name": "KUBE_TOKEN",
+      "encrypted_value": "AES:Ibues7R1H0h8LdzfbmbHUQ\u003d\u003d:7txbL4SjbBx3vA3mdNERGSXT3edN0+yCeRuOQG1UlLjU25xtBZV34VV3AXWYZiOAbf8/hK205JFs4CFqtgiqWY92W3FnWAg4YLbpJjPreNiKr7dFoSboyKEOHcOSNS2JsoVJPRhEepTEUmiYcddzkHXevvEoRMrAADvGv8EJePPIuxsnzHHfiInorJJVaYVQsKQDlt5V4UrqJf0s481K+gI+3+9sSz03AZN3U0Fd7VlmBPrYlmgdA6pHK9+VRH/8P9rAhhazdZIDrRNLNJ3mYVdQRwGkrAbVoSfQbREQfTB5MG6hONOymyMbL4yY8vSs3Qp/d3la5VFBqdFf4lVfOtApPFB6JxuPpM3iykLaKnawo6ViatO5SX2QoCuFKm0OKL4922J4u0IX2iRnCWPT/3Vb3OdFut1PNU9i8VQHvoJCKG/pQcIoSUci/N2BWEHBZsGsq8LwfAJll5sv6ugBISMAkUZM8ozPC056uNLtK40TMp46oJ1rIkjYBja18ZAJUFHRjP23vJ7Tmh3vwGEd6l/OkGE2tvUUE9GlUeSnkDjr4hpl6B5oKkeg2Ny17I76O5zm+M2FTHkymg1dBjEwdM6RFcbQrvHYAN7ZccVy5uA/8t5qd7dwHYLSxh+F/i23MoNv3NkU0qNEIQ4rjFHLnmnPHr2D5nrl9VIb7tKFFaHKK75zqLZcXFfMALv2fC98aiwmjphDDzKx0+oEyGdlMHr9s3KixWazSKQPJWpo+Qg3Dpx2l4UC+w2U9GMuf/f8t5EABpGpzw5lkpTCL8JI0DZwdZUcamyqUspv5QsdaDiBWnlffHuDP3qB9zWznWJH3+BJUbfSTOhmNlqRyY+A7+tPaUCduN2fkMqGt0Tp82x93dLet3OQ92T5S9GgQmxPyPyQvwpIaexSkEG1dWpTNPTUGxS7ixGglLQp4JJ3VdTTf1DuG1vsZLHcnZQDKY6VN+kU6x+/aZCPiw/1FXI2XhCrWFSzjtHP1r0xhYjdqlcOooGA7/wZCTHyl2t5TCpHLz18lvpTCU3yusuQhtaX2LiEkRw53cL25Ndd3Y0XAxp1DrXd7pCAMxsarpClRlejIhpDN1Y8cqzf1ncVS20AHA\u003d\u003d"
+    }   
+  ],
+  "parameters": [],
+  "materials": [
+    {
+      "pipeline": "build",
+      "stage": "build",
+      "name": "build",
+      "type": "dependency"
+    },
+    {
+      "url": "git@client-deploy.atlas.github.com:Mykrobe-tools/mykrobe-atlas-k8.git",
+      "branch": "master",
+      "shallow_clone": false,
+      "filter": {
+        "ignore": [],
+        "whitelist": []
+      },
+      "auto_update": true,
+      "name": "mykrobe-atlas-k8",
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "deploy",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+        "type": "success",
+        "users": [],
+        "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "deploy",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "elastic_profile_id": "atlas-api",
+          "run_instance_count": "0",
+          "timeout": 0.0,
+          "tasks": [
+            {
+              "artifact_id": "atlas-api",
+              "configuration": [
+                {
+                  "key": "EnvironmentVariablePrefix",
+                  "value": ""
+                }
+              ],
+              "pipeline": "build",
+              "stage": "build",
+              "job": "build",
+              "artifact_origin": "external",
+              "run_if": "passed",
+              "type": "fetch"
+            },
+            {
+              "command": "./deploy.sh",
+              "timeout": -1.0,
+              "arguments": [],
+              "run_if": "passed",
+              "type": "exec"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
