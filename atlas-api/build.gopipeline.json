@@ -71,7 +71,7 @@
             }
           ],
           "properties": [],
-          "elastic_profile_id": "atlas-api-2",
+          "elastic_profile_id": "atlas-api",
           "run_instance_count": "0",
           "timeout": 0.0,
           "tasks": [
@@ -158,7 +158,7 @@
             }
           ],
           "properties": [],
-          "elastic_profile_id": "atlas-api-2",
+          "elastic_profile_id": "atlas-api",
           "run_instance_count": "0",
           "timeout": 0.0,
           "tasks": [
@@ -235,7 +235,7 @@
             }
           ],
           "properties": [],
-          "elastic_profile_id": "atlas-api-2",
+          "elastic_profile_id": "atlas-api",
           "run_instance_count": "0",
           "timeout": 0.0,
           "tasks": [
