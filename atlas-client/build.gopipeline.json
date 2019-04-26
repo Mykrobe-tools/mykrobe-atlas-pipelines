@@ -20,7 +20,7 @@
   "parameters": [],
   "materials": [
     {
-      "url": "git@client.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api.git",
+      "url": "git@client.atlas.github.com:Mykrobe-tools/mykrobe-atlas.git",
       "branch": "feature/731-k8-deploy",
       "shallow_clone": false,
       "filter": {
