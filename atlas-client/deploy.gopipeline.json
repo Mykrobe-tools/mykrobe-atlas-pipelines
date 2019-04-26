@@ -99,7 +99,7 @@
           "timeout": 0.0,
           "tasks": [
             {
-              "artifact_id": "atlas-api",
+              "artifact_id": "atlas-client",
               "configuration": [
                 {
                   "key": "EnvironmentVariablePrefix",
