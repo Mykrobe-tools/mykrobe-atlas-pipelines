@@ -14,7 +14,8 @@
     },
     {
       "name": "DOCKERHUB_PASSWORD",
-      "encrypted_value": "AES:R9MYGcplMLdBAPr47Hr7hw\u003d\u003d:dh7GjZLBSk5iV+PxvfkYdw\u003d\u003d"
+      "encrypted_value": "AES:R9MYGcplMLdBAPr47Hr7hw\u003d\u003d:dh7GjZLBSk5iV+PxvfkYdw\u003d\u003d",
+      "secure": false
     }
   ],
   "parameters": [],
