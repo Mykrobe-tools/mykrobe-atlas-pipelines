@@ -11,7 +11,11 @@
     {
       "name": "DOCKERHUB_HOST",
       "value": ""
-    }
+    },
+    {
+      "name": "DOCKERHUB_PASSWORD",
+      "encrypted_value": "AES:njaZyAYKMj9Refh7hOh8+g\u003d\u003d:Ff5vRYbrbklSPPayVA5bnQ\u003d\u003d"
+    },
   ],
   "parameters": [],
   "materials": [
