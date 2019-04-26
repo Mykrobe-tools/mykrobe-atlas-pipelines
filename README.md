@@ -1,1 +1,3 @@
-# mykrobe-atlas-pipelines
+# Mykrobe Atlas Pipelines
+
+GoCD pipeline configuration
