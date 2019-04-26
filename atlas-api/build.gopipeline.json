@@ -14,7 +14,7 @@
     },
     {
       "name": "DOCKERHUB_PASSWORD",
-      "encrypted_value": "AES:R9MYGcplMLdBAPr47Hr7hw\u003d\u003d:dh7GjZLBSk5iV+PxvfkYdw\u003d\u003d"
+      "encrypted_value": "AES:R9MYGcplMLdBAPr47Hr7hw==:dh7GjZLBSk5iV+PxvfkYdw=="
     }
   ],
   "parameters": [],
@@ -167,7 +167,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker login --username\u003d$DOCKERHUB_USERNAME --password\u003d$DOCKERHUB_PASSWORD $DOCKERHUB_HOST"
+                "docker login --username=$DOCKERHUB_USERNAME --password=$DOCKERHUB_PASSWORD $DOCKERHUB_HOST"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -244,7 +244,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker login --username\u003d$DOCKERHUB_USERNAME --password\u003d$DOCKERHUB_PASSWORD $DOCKERHUB_HOST"
+                "docker login --username=$DOCKERHUB_USERNAME --password=$DOCKERHUB_PASSWORD $DOCKERHUB_HOST"
               ],
               "run_if": "passed",
               "type": "exec"
