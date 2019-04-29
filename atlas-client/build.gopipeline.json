@@ -1,6 +1,8 @@
 {
   "group": "CLIENT",
   "name": "build-client",
+  "format_version": 4,
+  "display_order_weight": 10,
   "label_template": "${COUNT}",
   "lock_behavior": "none",
   "environment_variables": [
