@@ -64,7 +64,7 @@
               "type": "exec"
             },
             {
-              "command": "./k8/deploy-bigsi.sh",
+              "command": "./k8/bigsi/bigsi-service/deploy-bigsi-service.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
