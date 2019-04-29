@@ -68,7 +68,14 @@
               "arguments": [],
               "run_if": "passed",
               "type": "exec"
-            }
+            },
+            {
+              "command": "ls -la",
+              "timeout": -1.0,
+              "arguments": [],
+              "run_if": "passed",
+              "type": "exec"
+            },
             {
               "command": "./k8/deploy-redis.sh",
               "timeout": -1.0,
