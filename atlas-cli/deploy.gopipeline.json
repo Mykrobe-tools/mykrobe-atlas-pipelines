@@ -21,7 +21,7 @@
   "materials": [
     {
       "url": "git@cli-deploy.atlas.github.com:Mykrobe-tools/mykrobe-atlas-analysis-api.git",
-      "branch": "master",
+      "branch": "release/dev",
       "shallow_clone": false,
       "filter": {
         "ignore": [],
