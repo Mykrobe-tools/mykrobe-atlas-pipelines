@@ -74,6 +74,16 @@
               "type": "exec"
             },
             {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "ls -la k8/"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
               "command": "/godata/pipelines/deploy-cli/k8/deploy-redis.sh",
               "timeout": -1.0,
               "arguments": [],
