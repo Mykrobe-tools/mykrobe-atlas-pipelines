@@ -1,6 +1,8 @@
 {
   "group": "API",
   "name": "test.integration",
+  "format_version": 4,
+  "display_order_weight": 3,
   "label_template": "${COUNT}",
   "lock_behavior": "none",
   "environment_variables": [
