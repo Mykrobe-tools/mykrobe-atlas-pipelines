@@ -30,7 +30,15 @@
     },
     {
       "name": "ES_CLUSTER_URL",
-      "value": "https://admin:Fc%26S8QL%3C%40j%3C%26%7D3Bj@es-dev.makeandship.com:9200"
+      "value": "https://es-dev.makeandship.com:9200"
+    },
+    {
+      "name": "ES_CLUSTER_USERNAME",
+      "value": "admin"
+    },
+    {
+      "name": "ES_CLUSTER_PASSWORD",
+      "value": "Fc&S8QL<@j<&}3Bj"
     },
     {
       "name": "ES_INDEX_NAME",
