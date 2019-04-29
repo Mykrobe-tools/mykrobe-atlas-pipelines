@@ -20,12 +20,6 @@
   "parameters": [],
   "materials": [
     {
-      "pipeline": "build-client",
-      "stage": "build",
-      "name": "build",
-      "type": "dependency"
-    },
-    {
       "url": "git@cli-deploy.atlas.github.com:Mykrobe-tools/mykrobe-atlas-analysis-api.git",
       "branch": "master",
       "shallow_clone": false,
@@ -69,15 +63,9 @@
               "run_if": "passed",
               "type": "exec"
             },
+            
             {
-              "command": "ls -la",
-              "timeout": -1.0,
-              "arguments": [],
-              "run_if": "passed",
-              "type": "exec"
-            },
-            {
-              "command": "./k8/deploy-redis.sh",
+              "command": "/godata/pipelines/deploy-cli/k8/deploy-redis.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
