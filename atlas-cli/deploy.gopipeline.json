@@ -63,7 +63,7 @@
           "timeout": 0.0,
           "tasks": [
             {
-              "command": "./deploy.sh",
+              "command": "./deploy-redis.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
