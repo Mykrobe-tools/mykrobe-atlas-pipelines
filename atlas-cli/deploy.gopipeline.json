@@ -57,14 +57,14 @@
           "timeout": 0.0,
           "tasks": [
             {
-              "command": "/godata/pipelines/deploy-cli/k8/deploy-redis.sh",
+              "command": "./k8/deploy-redis.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
               "type": "exec"
             },
             {
-              "command": "/godata/pipelines/deploy-cli/k8/deploy-bigsi.sh",
+              "command": "./k8/deploy-bigsi.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
