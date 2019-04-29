@@ -1,8 +1,6 @@
 {
   "group": "CLIENT",
   "name": "deploy-client",
-  "format_version": 4,
-  "display_order_weight": 20,
   "label_template": "${COUNT}",
   "lock_behavior": "none",
   "environment_variables": [

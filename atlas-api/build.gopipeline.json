@@ -1,8 +1,6 @@
 {
   "group": "API",
   "name": "build",
-  "format_version": 4,
-  "display_order_weight": 1,
   "label_template": "${COUNT}",
   "lock_behavior": "none",
   "environment_variables": [
