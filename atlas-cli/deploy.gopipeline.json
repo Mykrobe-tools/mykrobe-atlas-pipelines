@@ -80,6 +80,13 @@
               "arguments": [],
               "run_if": "passed",
               "type": "exec"
+            },
+            {
+              "command": "./k8/deploy-atlas.sh",
+              "timeout": -1.0,
+              "arguments": [],
+              "run_if": "passed",
+              "type": "exec"
             }
           ]
         }
