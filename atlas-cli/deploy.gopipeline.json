@@ -61,6 +61,16 @@
           "timeout": 0.0,
           "tasks": [
             {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":see_no_evil: CLI deploy started\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
               "command": "./k8/deploy-redis.sh",
               "timeout": -1.0,
               "arguments": [],
@@ -86,6 +96,26 @@
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":passenger_ship: CLI deploy complete\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: CLI deploy failed\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "failed",
               "type": "exec"
             }
           ]
