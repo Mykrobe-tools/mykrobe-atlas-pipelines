@@ -71,6 +71,26 @@
               ],
               "run_if": "passed",
               "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: API integration tests complete\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: API integration tests failed\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "failed",
+              "type": "exec"
             }
           ]
         }

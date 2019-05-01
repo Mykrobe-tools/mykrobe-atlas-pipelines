@@ -80,7 +80,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "curl -X POST -H 'Content-type: application/json' --data '{\"icon_emoji\": \":see_no_evil:\", \"text\":\"API build started\"}' https://hooks.slack.com/services/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"
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":see_no_evil: API build started\"}' https://hooks.slack.com/services/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"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -123,6 +123,26 @@
                 "docker build --no-cache -t $DOCKERHUB_USERNAME/atlas-api:$GO_PIPELINE_LABEL . -f deploy/Dockerfile"
               ],
               "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: API build complete\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: API build failed\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "failed",
               "type": "exec"
             }
           ]
