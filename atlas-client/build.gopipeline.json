@@ -13,6 +13,14 @@
       "value": ""
     },
     {
+      "name": "API_DEBUG",
+      "value": "1"
+    },
+    {
+      "name": "DEBUG_PRODUCTION",
+      "value": "1"
+    },
+    {
       "name": "API_URL",
       "value": "https://api-dev-mykrobe.makeandship.com"
     },
