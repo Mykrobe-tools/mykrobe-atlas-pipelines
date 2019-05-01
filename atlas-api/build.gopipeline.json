@@ -221,6 +221,26 @@
               ],
               "run_if": "passed",
               "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: API unit test build complete\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: API unit test build failed\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "failed",
+              "type": "exec"
             }
           ]
         }
@@ -297,6 +317,26 @@
                 "docker build -t $DOCKERHUB_USERNAME/atlas-api-test-integration:$GO_PIPELINE_LABEL . -f deploy/Dockerfile.test.integration"
               ],
               "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: API integration test build complete\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: API integration test build failed\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "failed",
               "type": "exec"
             }
           ]
