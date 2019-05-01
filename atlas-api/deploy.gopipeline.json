@@ -134,21 +134,6 @@
           "timeout": 0.0,
           "tasks": [
             {
-              "artifact_id": "atlas-api",
-              "configuration": [
-                {
-                  "key": "EnvironmentVariablePrefix",
-                  "value": ""
-                }
-              ],
-              "pipeline": "build",
-              "stage": "build",
-              "job": "build",
-              "artifact_origin": "external",
-              "run_if": "passed",
-              "type": "fetch"
-            },
-            {
               "command": "./deploy.sh",
               "timeout": -1.0,
               "arguments": [],
