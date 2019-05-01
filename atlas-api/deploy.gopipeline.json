@@ -75,7 +75,11 @@
     {
       "name": "MONGO_PASSWORD",
       "value": "5HKCO4SDkTfy"
-    } 
+    },
+    {
+      "name": "DEBUG",
+      "value": "1"
+    }
   ],
   "parameters": [],
   "materials": [
