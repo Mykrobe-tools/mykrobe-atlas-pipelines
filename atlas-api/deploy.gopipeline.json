@@ -79,6 +79,10 @@
     {
       "name": "ANALYSIS_API",
       "value": "https://analysis-api-dev-mykrobe.makeandship.com"
+    },
+    {
+      "name": "DEBUG",
+      "value": "1"
     }
   ],
   "parameters": [],
