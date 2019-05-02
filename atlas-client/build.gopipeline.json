@@ -58,7 +58,7 @@
     },
     {
       "name": "DOCKERHUB_PASSWORD",
-      "encrypted_value": "AES:I9rRr8wft8PfdCzfQjH1JA\u003d\u003d:ksNq8EaYVwWfKrHIx83SSA\u003d\u003d"
+      "encrypted_value": "AES:E+4z3yCcVt+d2Bgo2TytSw\u003d\u003d:+CVUAGZ2+cI9nC5t2F+uLw\u003d\u003d"
     },
     {
       "name":"AUTH_KEYCLOAK_URL",
