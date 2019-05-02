@@ -90,7 +90,8 @@
         "whitelist": []
       },
       "auto_update": true,
-      "type": "git"
+      "type": "git",
+      "name": "mykrobe-atlas"
     }
   ],
   "stages": [
