@@ -59,13 +59,25 @@
     {
       "name": "DOCKERHUB_PASSWORD",
       "encrypted_value": "AES:njaZyAYKMj9Refh7hOh8+g\u003d\u003d:Ff5vRYbrbklSPPayVA5bnQ\u003d\u003d"
+    },
+    {
+      "name":"AUTH_KEYCLOAK_URL",
+      "value":"https://accounts.makeandship.com/auth"
+    },
+    {
+      "name":"AUTH_KEYCLOAK_REALM",
+      "value":"atlas"
+    },
+    {
+      "name": "AUTH_KEYCLOAK_CLIENT_ID",
+      "value": "react-web-client"
     }
   ],
   "parameters": [],
   "materials": [
     {
       "url": "git@client.atlas.github.com:Mykrobe-tools/mykrobe-atlas.git",
-      "branch": "feature/731-k8-deploy",
+      "branch": "release/dev",
       "shallow_clone": false,
       "filter": {
         "ignore": [],
