@@ -1,6 +1,6 @@
 {
   "group": "CLIENT",
-  "name": "build-client",
+  "name": "build-standalone-client",
   "label_template": "${COUNT}",
   "lock_behavior": "none",
   "environment_variables": [
