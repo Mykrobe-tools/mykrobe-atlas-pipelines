@@ -75,7 +75,11 @@
     {
       "name": "MONGO_PASSWORD",
       "value": "5HKCO4SDkTfy"
-    } 
+    },
+    {
+      "name": "ANALYSIS_API",
+      "value": "https://analysis-api-dev-mykrobe.makeandship.com"
+    }
   ],
   "parameters": [],
   "materials": [
