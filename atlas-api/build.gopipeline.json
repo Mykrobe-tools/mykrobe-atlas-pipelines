@@ -21,7 +21,7 @@
   "materials": [
     {
       "url": "git@api.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api.git",
-      "branch": "release/dev",
+      "branch": "bugfix/761-metadata",
       "shallow_clone": false,
       "filter": {
         "ignore": [],
