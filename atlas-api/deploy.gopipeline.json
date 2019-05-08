@@ -81,6 +81,10 @@
       "value": "https://analysis-api-dev-mykrobe.makeandship.com"
     },
     {
+      "name": "BIGSI_API",
+      "value": "https://dev-bigsi-mykrobe.makeandship.com"
+    },
+    {
       "name": "DEBUG",
       "value": "1"
     }
