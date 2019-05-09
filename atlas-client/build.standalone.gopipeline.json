@@ -83,7 +83,7 @@
     },
     {
       "url": "git@client.atlas.github.com:Mykrobe-tools/mykrobe-atlas.git",
-      "branch": "fix/757-babel-runtime-in-server",
+      "branch": "release/dev",
       "shallow_clone": false,
       "filter": {
         "ignore": [],
