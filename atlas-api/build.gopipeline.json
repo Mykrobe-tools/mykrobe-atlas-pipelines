@@ -15,6 +15,10 @@
     {
       "name": "DOCKERHUB_PASSWORD",
       "encrypted_value": "AES:E+4z3yCcVt+d2Bgo2TytSw\u003d\u003d:+CVUAGZ2+cI9nC5t2F+uLw\u003d\u003d"
+    },
+    {
+      "name": "GOOGLE_MAPS_API_KEY",
+      "value": "AIzaSyAe_EWm97fTPHqzfRrhu2DVwO_iseBQkAc"
     }
   ],
   "parameters": [],
