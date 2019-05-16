@@ -71,7 +71,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run --rm $DOCKERHUB_USERNAME/atlas-api-test-unit:$GO_DEPENDENCY_LABEL_UPSTREAM yarn -e GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_API_KEY test:unit"
+                "docker run -e GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_API_KEY --rm $DOCKERHUB_USERNAME/atlas-api-test-unit:$GO_DEPENDENCY_LABEL_UPSTREAM yarn test:unit"
               ],
               "run_if": "passed",
               "type": "exec"
