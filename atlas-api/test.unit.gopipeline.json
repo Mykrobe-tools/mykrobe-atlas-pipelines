@@ -11,6 +11,10 @@
     {
       "name": "LOCATIONIQ_API_KEY",
       "value": "d1c26595029974"
+    },
+    {
+      "name": "DEMO_DATA_ROOT_FOLDER",
+      "value": "test/fixtures"
     }
   ],
   "parameters": [],
@@ -71,7 +75,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -e LOCATIONIQ_API_KEY=$LOCATIONIQ_API_KEY --rm $DOCKERHUB_USERNAME/atlas-api-test-unit:$GO_DEPENDENCY_LABEL_UPSTREAM yarn test:unit"
+                "docker run -e DEMO_DATA_ROOT_FOLDER=$DEMO_DATA_ROOT_FOLDER -e LOCATIONIQ_API_KEY=$LOCATIONIQ_API_KEY --rm $DOCKERHUB_USERNAME/atlas-api-test-unit:$GO_DEPENDENCY_LABEL_UPSTREAM yarn test:unit"
               ],
               "run_if": "passed",
               "type": "exec"
