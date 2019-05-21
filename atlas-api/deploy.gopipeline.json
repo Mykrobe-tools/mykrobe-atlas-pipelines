@@ -94,7 +94,7 @@
     },
     {
       "name": "DEMO_DATA_ROOT_FOLDER",
-      "value": "/home/atlas/demo/201906"
+      "value": "/home/atlas/demo"
     }
   ],
   "parameters": [],
