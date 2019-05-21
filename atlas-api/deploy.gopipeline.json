@@ -89,8 +89,12 @@
       "value": "1"
     },
     {
-      "name": "GOOGLE_MAPS_API_KEY",
-      "value": "AIzaSyAe_EWm97fTPHqzfRrhu2DVwO_iseBQkAc"
+      "name": "LOCATIONIQ_API_KEY",
+      "value": "d1c26595029974"
+    },
+    {
+      "name": "DEMO_DATA_ROOT_FOLDER",
+      "value": "/home/atlas/demo/201906"
     }
   ],
   "parameters": [],

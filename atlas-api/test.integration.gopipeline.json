@@ -9,8 +9,8 @@
       "value": "mthomsit"
     },
     {
-      "name": "GOOGLE_MAPS_API_KEY",
-      "value": "AIzaSyAe_EWm97fTPHqzfRrhu2DVwO_iseBQkAc"
+      "name": "LOCATIONIQ_API_KEY",
+      "value": "d1c26595029974"
     }
   ],
   "parameters": [],
@@ -71,7 +71,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -e GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_API_KEY --rm $DOCKERHUB_USERNAME/atlas-api-test-integration:$GO_DEPENDENCY_LABEL_UPSTREAM yarn test:integration"
+                "docker run -e LOCATIONIQ_API_KEY=$LOCATIONIQ_API_KEY --rm $DOCKERHUB_USERNAME/atlas-api-test-integration:$GO_DEPENDENCY_LABEL_UPSTREAM yarn test:integration"
               ],
               "run_if": "passed",
               "type": "exec"
