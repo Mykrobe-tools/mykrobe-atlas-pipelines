@@ -25,7 +25,7 @@
   "materials": [
     {
       "url": "git@api.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api.git",
-      "branch": "release/dev",
+      "branch": "bugfix/798-reindex",
       "shallow_clone": false,
       "filter": {
         "ignore": [],
