@@ -58,7 +58,7 @@
           "resources": [],
           "artifacts": [],
           "properties": [],
-          "elastic_profile_id": "atlas-api",
+          "elastic_profile_id": "atlas-api-1",
           "run_instance_count": "0",
           "timeout": 0.0,
           "tasks": [
