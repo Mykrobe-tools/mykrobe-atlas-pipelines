@@ -58,8 +58,8 @@
     },
     {
       "name": "DOCKERHUB_PASSWORD",
-      "encrypted_value": "AES:TCFGP+xYmvh/PG0ZxmKNVQ\u003d\u003d:VL6vc/Ye7eEAdSqw8QpJhg\u003d\u003d"
-    },
+      "encrypted_value": "AES:wOlTiU6WXNXpe+8wRGK3EA\u003d\u003d:oB8k+sG+qn13ULSgZofckMTDs0A09ba3gNTL5kwOkaA\u003d"
+    }
     {
       "name":"AUTH_KEYCLOAK_URL",
       "value":"https://accounts.makeandship.com/auth"
