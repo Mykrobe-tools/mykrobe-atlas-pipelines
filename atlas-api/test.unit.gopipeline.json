@@ -6,11 +6,11 @@
   "environment_variables": [
     {
       "name": "DOCKERHUB_USERNAME",
-      "value": "mthomsit"
+      "value": "msreadonly"
     },
     {
       "name": "LOCATIONIQ_API_KEY",
-      "value": "d1c26595029974"
+      "encrypted_value": "AES:A7eC7+YsuPUcBVS5viuwMw\u003d\u003d:V3rtIyhe8rua7Xyt3NkfaQ\u003d\u003d"
     },
     {
       "name": "DEMO_DATA_ROOT_FOLDER",

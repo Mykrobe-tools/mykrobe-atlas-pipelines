@@ -6,7 +6,7 @@
   "environment_variables": [
     {
       "name": "DOCKERHUB_USERNAME",
-      "value": "mthomsit"
+      "value": "msreadonly"
     },
     {
       "name": "DOCKERHUB_HOST",
@@ -14,11 +14,11 @@
     },
     {
       "name": "DOCKERHUB_PASSWORD",
-      "encrypted_value": "AES:TCFGP+xYmvh/PG0ZxmKNVQ\u003d\u003d:VL6vc/Ye7eEAdSqw8QpJhg\u003d\u003d"
+      "encrypted_value": "AES:wOlTiU6WXNXpe+8wRGK3EA\u003d\u003d:oB8k+sG+qn13ULSgZofckMTDs0A09ba3gNTL5kwOkaA\u003d"
     },
     {
       "name": "LOCATIONIQ_API_KEY",
-      "value": "d1c26595029974"
+      "encrypted_value": "AES:A7eC7+YsuPUcBVS5viuwMw\u003d\u003d:V3rtIyhe8rua7Xyt3NkfaQ\u003d\u003d"
     }
   ],
   "parameters": [],

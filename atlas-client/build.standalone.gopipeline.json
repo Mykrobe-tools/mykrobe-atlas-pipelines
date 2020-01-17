@@ -6,7 +6,7 @@
   "environment_variables": [
     {
       "name": "DOCKERHUB_USERNAME",
-      "value": "mthomsit"
+      "value": "msreadonly"
     },
     {
       "name": "DOCKERHUB_HOST",
