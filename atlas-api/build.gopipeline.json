@@ -9,6 +9,10 @@
       "value": "msreadonly"
     },
     {
+      "name": "DOCKERHUB_ORGANISATION",
+      "value": "makeandship"
+    },
+    {
       "name": "DOCKERHUB_HOST",
       "value": ""
     },
@@ -60,7 +64,7 @@
               "configuration": [
                 {
                   "key": "Image",
-                  "value": "${DOCKERHUB_USERNAME}/atlas-api"
+                  "value": "${DOCKERHUB_ORGANISATION}/atlas-api"
                 },
                 {
                   "key": "Tag",
@@ -124,7 +128,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker build --no-cache -t $DOCKERHUB_USERNAME/atlas-api:$GO_PIPELINE_LABEL . -f deploy/Dockerfile"
+                "docker build --no-cache -t $DOCKERHUB_ORGANISATION/atlas-api:$GO_PIPELINE_LABEL . -f deploy/Dockerfile"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -221,7 +225,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker build -t $DOCKERHUB_USERNAME/atlas-api-test-unit:$GO_PIPELINE_LABEL . -f deploy/Dockerfile.test.unit"
+                "docker build -t $DOCKERHUB_ORGANISATION/atlas-api-test-unit:$GO_PIPELINE_LABEL . -f deploy/Dockerfile.test.unit"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -274,7 +278,7 @@
               "configuration": [
                 {
                   "key": "Image",
-                  "value": "mthomsit/atlas-api-test-integration"
+                  "value": "${DOCKERHUB_ORGANISATION}/atlas-api-test-integration"
                 },
                 {
                   "key": "Tag",
@@ -318,7 +322,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker build -t $DOCKERHUB_USERNAME/atlas-api-test-integration:$GO_PIPELINE_LABEL . -f deploy/Dockerfile.test.integration"
+                "docker build -t $DOCKERHUB_ORGANISATION/atlas-api-test-integration:$GO_PIPELINE_LABEL . -f deploy/Dockerfile.test.integration"
               ],
               "run_if": "passed",
               "type": "exec"
