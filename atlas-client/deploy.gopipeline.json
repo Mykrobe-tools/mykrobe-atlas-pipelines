@@ -15,7 +15,7 @@
     {
       "name": "DOCKERHUB_PASSWORD",
       "encrypted_value": "AES:DHba5uju7tk1wfpMZJeH8Q\u003d\u003d:9Mcg/xZcAZtLAkAE1V+6yScyHB6//c2w/YTQxTMLAKE\u003d"
-    }
+    },
     {
       "name": "NAMESPACE",
       "value": "mykrobe"
