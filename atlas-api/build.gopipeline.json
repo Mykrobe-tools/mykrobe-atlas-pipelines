@@ -181,7 +181,7 @@
               "configuration": [
                 {
                   "key": "Image",
-                  "value": "${DOCKERHUB_USERNAME}/atlas-api-test-unit"
+                  "value": "${DOCKERHUB_ORGANISATION}/atlas-api-test-unit"
                 },
                 {
                   "key": "Tag",
