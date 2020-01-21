@@ -81,7 +81,7 @@
   "materials": [
     {
       "url": "git@client.atlas.github.com:Mykrobe-tools/mykrobe-atlas.git",
-      "branch": "release/dev",
+      "branch": "feature/959-upgrade-ubuntu-and-node",
       "shallow_clone": false,
       "filter": {
         "ignore": [],
