@@ -120,6 +120,12 @@
   "parameters": [],
   "materials": [
     {
+      "pipeline": "build",
+      "stage": "build",
+      "name": "build",
+      "type": "dependency"
+    },
+    {
       "pipeline": "test.unit",
       "stage": "test.unit",
       "name": "test.unit",
