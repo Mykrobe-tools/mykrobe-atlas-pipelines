@@ -21,24 +21,36 @@
       "value": ""
     },
     {
-      "name": "API_DEBUG",
-      "value": "1"
-    },
-    {
       "name": "DEBUG_PRODUCTION",
       "value": "1"
     },
     {
+      "name": "API_DEBUG",
+      "value": "1"
+    },
+    {
       "name": "API_URL",
-      "value": "https://api-dev-mykrobe.makeandship.com"
+      "value": "http://api-dev.mykro.be"
     },
     {
       "name": "API_SWAGGER_URL",
-      "value": "https://api-dev-mykrobe.makeandship.com/swagger.json"
+      "value": "http://api-dev.mykro.be/swagger.json"
     },
     {
       "name": "AUTH_COOKIE_NAME",
-      "value": "api-dev-mykrobe.makeandship.com"
+      "value": "api-dev.mykro.be"
+    },
+    {
+      "name":"AUTH_KEYCLOAK_URL",
+      "value":"https://accounts.makeandship.com/auth"
+    },
+    {
+      "name":"AUTH_KEYCLOAK_REALM",
+      "value":"atlas"
+    },
+    {
+      "name": "AUTH_KEYCLOAK_CLIENT_ID",
+      "value": "react-web-client"
     },
     {
       "name": "GOOGLE_MAPS_API_KEY",
@@ -63,18 +75,6 @@
     {
       "name": "ONEDRIVE_CLIENT_ID",
       "encrypted_value": "AES:yPTQwzoASBmsySMnfoyKLA\u003d\u003d:Qd/nXkZYcrs37bwVsW0p2BttSSGEE39yTRFw9nM3LMquA+PAv+mRMufNI79tFnKg"
-    },
-    {
-      "name":"AUTH_KEYCLOAK_URL",
-      "value":"https://accounts.makeandship.com/auth"
-    },
-    {
-      "name":"AUTH_KEYCLOAK_REALM",
-      "value":"atlas"
-    },
-    {
-      "name": "AUTH_KEYCLOAK_CLIENT_ID",
-      "value": "react-web-client"
     }
   ],
   "parameters": [],
