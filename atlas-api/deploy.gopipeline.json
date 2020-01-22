@@ -77,7 +77,7 @@
       "value": "https://dev.mykro.be/"
     },
     {
-      "name": "KEYCLOAK_URI",
+      "name": "KEYCLOAK_URL",
       "value": "https://accounts.makeandship.com/auth"
     },
     {
