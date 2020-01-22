@@ -113,7 +113,7 @@
       "value": "/app/demo"
     },
     {
-      "name": "LOCATIONIQ_API_KEY",
+      "name": "LOCATION_API_KEY",
       "encrypted_value": "AES:A7eC7+YsuPUcBVS5viuwMw\u003d\u003d:V3rtIyhe8rua7Xyt3NkfaQ\u003d\u003d"
     }
   ],
