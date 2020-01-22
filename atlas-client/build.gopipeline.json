@@ -30,11 +30,11 @@
     },
     {
       "name": "API_URL",
-      "value": "http://api-dev.mykro.be"
+      "value": "https://api-dev.mykro.be"
     },
     {
       "name": "API_SWAGGER_URL",
-      "value": "http://api-dev.mykro.be/swagger.json"
+      "value": "https://api-dev.mykro.be/swagger.json"
     },
     {
       "name": "AUTH_COOKIE_NAME",
