@@ -70,7 +70,7 @@
     },
     {
       "name": "ES_INDEX_NAME",
-      "value": "mykro-be-dev"
+      "value": "mykrobe-dev"
     },
     {
       "name": "KEYCLOAK_REDIRECT_URI",
