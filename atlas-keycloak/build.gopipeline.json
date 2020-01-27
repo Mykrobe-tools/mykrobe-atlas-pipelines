@@ -55,23 +55,10 @@
           "resources": [],
           "artifacts": [
             {
-              "id": "atlas-client",
-              "store_id": "DockerHub",
-              "configuration": [
-                {
-                  "key": "Image",
-                  "value": "${DOCKERHUB_ORGANISATION}/atlas-keycloak"
-                },
-                {
-                  "key": "Tag",
-                  "value": "${GO_PIPELINE_LABEL}"
-                },
-                {
-                  "key": "BuildFile",
-                  "value": ""
-                }
-              ],
-              "type": "external"
+              "id": "atlas-keycloak-theme",
+              "source": "./dist/atlas-keycloak-theme.zip",
+              "destination": "./dist/atlas-keycloak-theme.zip",
+              "type": "build"
             }
           ],
           "properties": [],
