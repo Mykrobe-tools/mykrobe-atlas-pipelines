@@ -1,0 +1,157 @@
+{
+  "group": "KEYCLOAK",
+  "name": "build-keycloak",
+  "label_template": "${COUNT}",
+  "lock_behavior": "none",
+  "environment_variables": [
+    {
+      "name": "DOCKERHUB_USERNAME",
+      "value": "mthomsit"
+    },
+    {
+      "name": "DOCKERHUB_ORGANISATION",
+      "value": "makeandship"
+    },
+    {
+      "name": "DOCKERHUB_PASSWORD",
+      "encrypted_value": "AES:DHba5uju7tk1wfpMZJeH8Q\u003d\u003d:9Mcg/xZcAZtLAkAE1V+6yScyHB6//c2w/YTQxTMLAKE\u003d"
+    },
+    {
+      "name": "DOCKERHUB_HOST",
+      "value": ""
+    }
+  ],
+  "parameters": [],
+  "materials": [
+    {
+      "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-keycloak.git",
+      "branch": "master",
+      "shallow_clone": false,
+      "filter": {
+        "ignore": [],
+        "whitelist": []
+      },
+      "auto_update": true,
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+        "type": "success",
+        "users": [],
+        "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "build",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [
+            {
+              "id": "atlas-client",
+              "store_id": "DockerHub",
+              "configuration": [
+                {
+                  "key": "Image",
+                  "value": "${DOCKERHUB_ORGANISATION}/atlas-keycloak"
+                },
+                {
+                  "key": "Tag",
+                  "value": "${GO_PIPELINE_LABEL}"
+                },
+                {
+                  "key": "BuildFile",
+                  "value": ""
+                }
+              ],
+              "type": "external"
+            }
+          ],
+          "properties": [],
+          "elastic_profile_id": "atlas-api",
+          "run_instance_count": "0",
+          "timeout": 0.0,
+          "tasks": [
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":see_no_evil: Keycloak build started\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "cp /home/go/.ssh/bitbucket-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "cp /home/go/.ssh/atlas-jsonschema-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "cp /home/go/.ssh/atlas-keycloak-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "docker build -t $DOCKERHUB_ORGANISATION/atlas-client:$GO_PIPELINE_LABEL . -f deploy/ClientDockerfile"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: Keycloak build complete\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: Keycloak build failed\"}' https://hooks.slack.com/services/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"
+              ],
+              "run_if": "failed",
+              "type": "exec"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
