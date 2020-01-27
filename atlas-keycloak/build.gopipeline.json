@@ -134,7 +134,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker build -t $DOCKERHUB_ORGANISATION/atlas-client:$GO_PIPELINE_LABEL . -f deploy/ThemeDockerfile"
+                "docker build -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL . -f deploy/ThemeDockerfile"
               ],
               "run_if": "passed",
               "type": "exec"
