@@ -57,7 +57,7 @@
             {
               "id": "atlas-keycloak-theme",
               "source": "./dist/atlas-keycloak-theme.zip",
-              "destination": "atlas-keycloak-theme.zip",
+              "destination": "theme",
               "type": "build"
             }
           ],
