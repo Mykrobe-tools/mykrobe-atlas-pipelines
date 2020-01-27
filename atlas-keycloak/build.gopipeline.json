@@ -56,7 +56,7 @@
           "artifacts": [
             {
               "id": "atlas-keycloak-theme",
-              "source": "**/dist/mykrobe-atlas-themes.zip",
+              "source": "**/mykrobe-atlas-themes.zip",
               "destination": "",
               "type": "build"
             }
@@ -141,7 +141,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "pwd"
+                "cp /home/go/pipelines/build-keycloak/dist/mykrobe-atlas-themes.zip /godata/pipelines/build-keycloak/"
               ],
               "run_if": "passed",
               "type": "exec"
