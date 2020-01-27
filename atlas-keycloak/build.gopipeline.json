@@ -114,6 +114,16 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
+                "cp /home/go/.ssh/atlas-readonly ."
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
                 "cp /home/go/.ssh/atlas-keycloak-readonly ."
               ],
               "run_if": "passed",
