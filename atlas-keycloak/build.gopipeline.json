@@ -141,7 +141,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "cp /home/go/pipelines/build-keycloak/dist/mykrobe-atlas-themes.zip /godata/pipelines/build-keycloak/"
+                "cp /go/pipelines/build-keycloak/dist/mykrobe-atlas-themes.zip /godata/pipelines/build-keycloak/"
               ],
               "run_if": "passed",
               "type": "exec"
