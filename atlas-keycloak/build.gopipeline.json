@@ -144,7 +144,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -v `../dist`:`dist` -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
+                "docker run -v ./dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
               ],
               "run_if": "passed",
               "type": "exec"
