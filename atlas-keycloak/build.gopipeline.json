@@ -98,7 +98,7 @@
               "type": "exec"
             },
             {
-              "artifact_id": "keycloak-themes",
+              "artifact_id": "atlas-keycloak-theme",
               "configuration": [
                 {
                   "key": "EnvironmentVariablePrefix",
