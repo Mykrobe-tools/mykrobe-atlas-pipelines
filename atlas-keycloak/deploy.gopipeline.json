@@ -34,7 +34,7 @@
       "type": "dependency"
     },
     {
-      "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-keycloak.git",
+      "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api-k8.git",
       "branch": "master",
       "shallow_clone": false,
       "filter": {
@@ -42,7 +42,7 @@
         "whitelist": []
       },
       "auto_update": true,
-      "name": "mykrobe-atlas-keycloak",
+      "name": "mykrobe-atlas-api-k8",
       "type": "git"
     }
   ],

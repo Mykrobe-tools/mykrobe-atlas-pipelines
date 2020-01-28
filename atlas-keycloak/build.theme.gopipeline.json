@@ -32,7 +32,8 @@
         "whitelist": []
       },
       "auto_update": true,
-      "type": "git"
+      "type": "git",
+      "name": "atlas-keycloak"
     }
   ],
   "stages": [

@@ -27,7 +27,8 @@
       "pipeline": "build-keycloak-theme",
       "stage": "build",
       "name": "build",
-      "type": "dependency"
+      "type": "dependency",
+      "name": "atlas-keycloak-theme"
     },
     {
       "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-keycloak.git",
@@ -38,7 +39,8 @@
         "whitelist": []
       },
       "auto_update": true,
-      "type": "git"
+      "type": "git",
+      "name": "atlas-keycloak"
     }
   ],
   "stages": [
