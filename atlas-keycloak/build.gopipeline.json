@@ -142,6 +142,16 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
+                "sleep 5m"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
                 "docker build -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL . -f deploy/KeycloakDockerfile"
               ],
               "run_if": "passed",
