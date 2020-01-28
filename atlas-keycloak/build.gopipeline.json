@@ -97,6 +97,15 @@
               "type": "exec"
             },
             {
+              "source": "mykrobe-atlas-themes.zip",
+              "is_source_a_file": true,
+              "pipeline": "build-keycloak-theme",
+              "stage": "build",
+              "job": "build",
+              "run_if": "passed",
+              "type": "fetch"
+            },
+            {
               "command": "bash",
               "timeout": -1.0,
               "arguments": [
