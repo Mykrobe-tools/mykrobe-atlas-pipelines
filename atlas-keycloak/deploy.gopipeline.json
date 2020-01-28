@@ -34,7 +34,7 @@
       "type": "dependency"
     },
     {
-      "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api-k8.git",
+      "url": "git@api-deploy.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api-k8.git",
       "branch": "master",
       "shallow_clone": false,
       "filter": {
