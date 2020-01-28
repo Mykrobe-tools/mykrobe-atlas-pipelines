@@ -97,17 +97,6 @@
               "type": "exec"
             },
             {
-              "artifact_id": "atlas-keycloak-theme",
-              "source": "mykrobe-atlas-themes.zip",
-              "is_source_a_file": true,
-              "pipeline": "build-keycloak-theme",
-              "stage": "build",
-              "job": "build",
-              "artifact_origin": "external",
-              "run_if": "passed",
-              "type": "fetch"
-            },
-            {
               "command": "bash",
               "timeout": -1.0,
               "arguments": [
