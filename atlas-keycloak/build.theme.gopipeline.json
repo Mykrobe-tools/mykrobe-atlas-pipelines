@@ -1,6 +1,6 @@
 {
   "group": "KEYCLOAK",
-  "name": "build-keycloak",
+  "name": "build-keycloak-theme",
   "label_template": "${COUNT}",
   "lock_behavior": "none",
   "environment_variables": [
@@ -23,12 +23,6 @@
   ],
   "parameters": [],
   "materials": [
-    {
-      "pipeline": "build-keycloak-theme",
-      "stage": "build",
-      "name": "build",
-      "type": "dependency"
-    },
     {
       "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-keycloak.git",
       "branch": "master",
@@ -61,23 +55,10 @@
           "resources": [],
           "artifacts": [
             {
-              "id": "atlas-keycloak",
-              "store_id": "DockerHub",
-              "configuration": [
-                {
-                  "key": "Image",
-                  "value": "${DOCKERHUB_ORGANISATION}/atlas-keycloak"
-                },
-                {
-                  "key": "Tag",
-                  "value": "${GO_PIPELINE_LABEL}"
-                },
-                {
-                  "key": "BuildFile",
-                  "value": ""
-                }
-              ],
-              "type": "external"
+              "id": "atlas-keycloak-theme",
+              "source": "**/mykrobe-atlas-themes.zip",
+              "destination": "",
+              "type": "build"
             }
           ],
           "properties": [],
@@ -90,7 +71,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":see_no_evil: Keycloak build started\"}' https://hooks.slack.com/services/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"
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":see_no_evil: Keycloak theme build started\"}' https://hooks.slack.com/services/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"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -140,7 +121,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker build -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL . -f deploy/KeycloakDockerfile"
+                "docker build -t $DOCKERHUB_ORGANISATION/atlas-keycloak-themes:$GO_PIPELINE_LABEL . -f deploy/ThemeDockerfile"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -150,7 +131,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -v /go/pipelines/build-keycloak/dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
+                "docker run -v /go/pipelines/build-keycloak-theme/dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak-themes:$GO_PIPELINE_LABEL"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -160,7 +141,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: Keycloak build complete\"}' https://hooks.slack.com/services/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"
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: Keycloak theme build complete\"}' https://hooks.slack.com/services/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"
               ],
               "run_if": "passed",
               "type": "exec"
@@ -170,7 +151,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: Keycloak build failed\"}' https://hooks.slack.com/services/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"
+                "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":disappointed: Keycloak theme build failed\"}' https://hooks.slack.com/services/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"
               ],
               "run_if": "failed",
               "type": "exec"
