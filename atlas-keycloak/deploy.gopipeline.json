@@ -44,17 +44,6 @@
       "auto_update": true,
       "name": "mykrobe-atlas-keycloak",
       "type": "git"
-    },
-    {
-      "url": "git@api-deploy.atlas.github.com:Mykrobe-tools/mykrobe-atlas-api-k8.git",
-      "branch": "master",
-      "shallow_clone": false,
-      "filter": {
-        "ignore": [],
-        "whitelist": []
-      },
-      "auto_update": true,
-      "name": "mykrobe-atlas-api-k8"
     }
   ],
   "stages": [
@@ -97,7 +86,7 @@
               "type": "fetch"
             },
             {
-              "command": "./keycloak/deploy.sh",
+              "command": "./deploy/deploy.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
