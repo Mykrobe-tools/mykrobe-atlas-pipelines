@@ -98,6 +98,21 @@
               "type": "exec"
             },
             {
+              "artifact_id": "keycloak-themes",
+              "configuration": [
+                {
+                  "key": "EnvironmentVariablePrefix",
+                  "value": ""
+                }
+              ],
+              "pipeline": "build-keycloak-theme",
+              "stage": "build",
+              "job": "build",
+              "artifact_origin": "external",
+              "run_if": "passed",
+              "type": "fetch"
+            },
+            {
               "command": "bash",
               "timeout": -1.0,
               "arguments": [
