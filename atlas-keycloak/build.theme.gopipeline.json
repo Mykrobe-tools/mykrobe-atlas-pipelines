@@ -58,7 +58,7 @@
             {
               "id": "atlas-keycloak-theme",
               "source": "**/mykrobe-atlas-themes.zip",
-              "destination": "mykrobe-atlas-themes.zip",
+              "destination": "",
               "type": "build"
             }
           ],
