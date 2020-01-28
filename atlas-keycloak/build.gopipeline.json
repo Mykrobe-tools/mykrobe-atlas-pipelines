@@ -131,7 +131,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -v /godata/pipelines/build-keycloak/dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
+                "docker run -v /go/pipelines/build-keycloak/dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
               ],
               "run_if": "passed",
               "type": "exec"
