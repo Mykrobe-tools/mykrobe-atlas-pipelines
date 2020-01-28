@@ -26,9 +26,8 @@
     {
       "pipeline": "build-keycloak-theme",
       "stage": "build",
-      "name": "build",
-      "type": "dependency",
-      "name": "atlas-keycloak-theme"
+      "name": "build-keycloak-theme-build",
+      "type": "dependency"
     },
     {
       "url": "git@keycloak.atlas.github.com:Mykrobe-tools/mykrobe-atlas-keycloak.git",
@@ -98,13 +97,8 @@
               "type": "exec"
             },
             {
-              "artifact_id": "atlas-keycloak-theme",
-              "configuration": [
-                {
-                  "key": "EnvironmentVariablePrefix",
-                  "value": ""
-                }
-              ],
+              "source": "mykrobe-atlas-themes.zip",
+              "is_source_a_file": true,
               "pipeline": "build-keycloak-theme",
               "stage": "build",
               "job": "build",
