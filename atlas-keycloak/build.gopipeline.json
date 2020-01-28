@@ -131,17 +131,7 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -v dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
-              ],
-              "run_if": "passed",
-              "type": "exec"
-            },
-            {
-              "command": "bash",
-              "timeout": -1.0,
-              "arguments": [
-                "-c",
-                "cp /go/pipelines/build-keycloak/dist/mykrobe-atlas-themes.zip /godata/pipelines/build-keycloak/"
+                "docker run -v /godata/pipelines/build-keycloak/dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
               ],
               "run_if": "passed",
               "type": "exec"
