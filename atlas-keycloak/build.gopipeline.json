@@ -152,16 +152,6 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
-                "docker run -v /go/pipelines/build-keycloak/dist:/app/dist -t $DOCKERHUB_ORGANISATION/atlas-keycloak:$GO_PIPELINE_LABEL"
-              ],
-              "run_if": "passed",
-              "type": "exec"
-            },
-            {
-              "command": "bash",
-              "timeout": -1.0,
-              "arguments": [
-                "-c",
                 "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\":ok_hand: Keycloak build complete\"}' https://hooks.slack.com/services/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"
               ],
               "run_if": "passed",
