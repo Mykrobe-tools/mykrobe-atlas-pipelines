@@ -57,7 +57,7 @@
           "artifacts": [
             {
               "id": "atlas-keycloak-theme",
-              "source": "**/mykrobe-atlas-themes.zip",
+              "source": "**/mykrobe-atlas-themes.tar.gz",
               "destination": "",
               "type": "build"
             }
