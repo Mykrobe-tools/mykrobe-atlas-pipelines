@@ -110,6 +110,16 @@
               "timeout": -1.0,
               "arguments": [
                 "-c",
+                "sleep 5m"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
                 "cp /home/go/.ssh/bitbucket-readonly ."
               ],
               "run_if": "passed",
