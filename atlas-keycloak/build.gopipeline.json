@@ -97,6 +97,16 @@
               "type": "exec"
             },
             {
+              "command": "bash",
+              "timeout": -1.0,
+              "arguments": [
+                "-c",
+                "docker login --username=$DOCKERHUB_USERNAME --password=$DOCKERHUB_PASSWORD $DOCKERHUB_HOST"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            },
+            {
               "source": "dist/mykrobe-atlas-themes.zip",
               "is_source_a_file": true,
               "pipeline": "build-keycloak-theme",
@@ -104,16 +114,6 @@
               "job": "build",
               "run_if": "passed",
               "type": "fetch"
-            },
-            {
-              "command": "bash",
-              "timeout": -1.0,
-              "arguments": [
-                "-c",
-                "sleep 5m"
-              ],
-              "run_if": "passed",
-              "type": "exec"
             },
             {
               "command": "bash",
