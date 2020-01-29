@@ -52,12 +52,10 @@
       "name": "KEYCLOAK_USER",
       "value": "admin"
     },
-    ,
     {
       "name": "KEYCLOAK_PASSWORD",
       "encrypted_value": "AES:/OhUFjzEaO8j454GN2wzIA\u003d\u003d:vD4nJKgbnabUHmDcd6i4z+FHpukHd63yo6aHZGmdUOc\u003d"
-    },
-    ,
+    },  
     {
       "name": "PROXY_ADDRESS_FORWARDING",
       "value": "true"
