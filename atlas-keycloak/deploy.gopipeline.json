@@ -23,6 +23,49 @@
     {
       "name": "KUBE_TOKEN",
       "encrypted_value": "AES:spvjsKk6u3i+8p/YcXGEPQ\u003d\u003d:/tDp3DlyPDPZdgRt3UeasPPr1Cyxz2kJYfwncjdlFV4VJFNKlA/DNBpclQI5Y7oAmNo4YPOFl/N35d1ZjKFyrFBc4K9gDdcm7jvIja9fncjj9kZNDIarWEH2MSm9RdzwoXNbfvTfNTlk2Gq8w3ZFshtW4LtHlrLSd4/9QcSynfnJB/dDu4fnyXbUHiVxpeVsZfcwmBz/DNnNTApEydVRHaXg09Ecm2xYxVIoEXOQ/HzOj9x69yF4S9b9O12sgHJbmARQoBWTbRGgnR2pSPkThbK5s1HXT633Z0+0XdGd08M/Nf38c3ZtFOXSc26jSQ81jxEGxVFuql7g7bXDPFVNY75SOKtSZ9bFDIs8yos8jmN0wh/z4aRLZfloQngWIocgtgrpHRwqCAj2hGFvAe8MZ3fIWAkvV6pnXDB3hTf/A9B2c+4YkzhyoRwoqWEiTQW0ikCRum2+akxY8a1sMgjDVadVKmrx7oeQhjlY89Hvhzm+v0torz7h4Z4uEKniavZ1L8JNqAC2sz6ItLFHXg2T1UK53SD9tDyZNLtyPIV8LcGsuM3UVnFRw+GVQSQhI0eGLBomWBAoz4sqalW3nxbo3pt8E3QcB+/+x6dfCm7d3WE6Vke0Erbsb32tYMUyXjnhwUNmb2/jWi5T8L3xurGwEUUFHOYhCjb8+JBtZx0v9v20wXEAWF0WbnUg+6mObroc3wFJkZ2NHbGPHs6Z76vk3jsFEt+kr0OyM/7GyUwiDeVXsiC17bsj8O3FWNqL/aDBqn3xDhghGBCmBcihd1zi9+aP7GP3R39TOuydufSxZrcH9JQiZ4aMkzZ1ctr1eG6QDVNjXEu20oOXeg/QCGhSrRRyXVwZpnGPOBvbJErBMLmg3u5+Sh6Jyiz7Wxk1dgH8SiZarj734E6FFNYWFa1QeM8Dza2OzERQeoBZ8GozzFPn/cWeQb8SzqUTnfK/JUe803VYNtX6JOrLaq/qQt1Inr6xQJrKz84eqQsamzmgoV/D4EIIBMHlY7boc7rwRnYCtK9SKbmiX44+7cB0P3OpRDBXF7q0RqBTu33YnpC71Ip6x81PnEkYvC56RMuIALxP5Jpy2Q1Lg7y4gzViupd0tg\u003d\u003d"
+    },
+    {
+      "name": "NAMESPACE",
+      "value": "default"
+    },
+    {
+      "name": "KEYCLOAK_DB_VENDOR",
+      "value": "POSTGRES"
+    },
+    {
+      "name": "KEYCLOAK_DB_ADDR",
+      "value": "keycloak-postgres"
+    },
+    {
+      "name": "KEYCLOAK_DB_DATABASE",
+      "value": "keycloak"
+    },
+    {
+      "name": "KEYCLOAK_DB_PORT",
+      "value": "5432"
+    },
+    {
+      "name": "KEYCLOAK_DB_USER",
+      "value": "keycloak"
+    },
+    {
+      "name": "KEYCLOAK_DB_PASSWORD",
+      "encrypted_value": "AES:76HS2KhHgtUQipQamSpUnw\u003d\u003d:huhJebDEq6l0k3xIE1YBFOX34fiMMeAS9RGyRymnD78\u003d"
+    },
+    ,
+    {
+      "name": "KEYCLOAK_USER",
+      "value": "admin"
+    },
+    ,
+    {
+      "name": "KEYCLOAK_PASSWORD",
+      "encrypted_value": "AES:/OhUFjzEaO8j454GN2wzIA\u003d\u003d:vD4nJKgbnabUHmDcd6i4z+FHpukHd63yo6aHZGmdUOc\u003d"
+    },
+    ,
+    {
+      "name": "PROXY_ADDRESS_FORWARDING",
+      "value": "true"
     }
   ],
   "parameters": [],
@@ -44,7 +87,7 @@
       "auto_update": true,
       "name": "mykrobe-atlas-api-k8",
       "type": "git"
-    }
+    } 
   ],
   "stages": [
     {
@@ -86,7 +129,7 @@
               "type": "fetch"
             },
             {
-              "command": "./deploy/deploy.sh",
+              "command": "./keycloak/deploy.sh",
               "timeout": -1.0,
               "arguments": [],
               "run_if": "passed",
