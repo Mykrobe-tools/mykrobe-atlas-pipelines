@@ -23,6 +23,10 @@
     {
       "name": "LOCATIONIQ_API_KEY",
       "encrypted_value": "AES:A7eC7+YsuPUcBVS5viuwMw\u003d\u003d:V3rtIyhe8rua7Xyt3NkfaQ\u003d\u003d"
+    },
+    {
+      "name": "LOG_LEVEL",
+      "value": "debug"
     }
   ],
   "parameters": [],
