@@ -18,7 +18,7 @@
     },
     {
       "name": "NAMESPACE",
-      "value": "default"
+      "value": "mykrobe-dev"
     },
     {
       "name": "KUBE_TOKEN",
